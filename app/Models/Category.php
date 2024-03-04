@@ -14,4 +14,9 @@ class Category extends Model
         'description',
         'slug'
     ];
+
+    //En una categoria puede existit,en varios PRODUCTOS plural
+    public function products(){
+        return $this->belongsTo(Product::class);
+    }
 }
